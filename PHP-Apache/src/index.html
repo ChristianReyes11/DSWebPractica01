@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" /> 
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <title>REGISTRO</title>
+    </head>
+    <body>
+        <form action=alta.php method=POST autocomplete="off">
+            <h1>INGRESA LOS DATOS</h1>
+            <div>
+                <p>Clave</p>
+                <input class="input" type="text" name="clave" required/>
+                <p>Nombre</p>
+                <input class="input" type="text" name="nombre" required/> 
+                <p>Direccion</p>
+                <input class="input" type="text" name="direccion" required/>  
+            </div>
+            <input  type=submit class="button asigCompeButton" name=Submit value="Guardar">
+        </form>
+    </body>
+</html>
