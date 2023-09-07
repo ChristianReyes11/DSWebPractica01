@@ -5,7 +5,7 @@ GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
 ALTER DATABASE mydb OWNER TO myuser;
 
 \connect mydb
-CREATE TABLE pejemplo
+CREATE TABLE mytable
 (
     clave SERIAL PRIMARY KEY,
     nombre character varying,
@@ -13,4 +13,4 @@ CREATE TABLE pejemplo
     telefono character varying
 );
 
-ALTER TABLE pejemplo OWNER TO myuser;
+ALTER TABLE mytable OWNER TO myuser;
