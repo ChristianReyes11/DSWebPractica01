@@ -4,15 +4,15 @@
         $pdo = new PDO($url, "postgres", "password", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         if ($pdo) {
 
-                $insert = $pdo->prepare("INSERT INTO mytable (clave, nombre, direccion) VALUES (:clave, :nombre, :direccion)");
+                $insert = $pdo->prepare("INSERT INTO mytable (nombre, direccion, telefono) VALUES (:nombre, :direccion, :telefono)");
             
-            $insert->bindParam(':clave', $_POST['clave']);
             $insert->bindParam(':nombre', $_POST['nombre']);
             $insert->bindParam(':direccion', $_POST['direccion']);
+            $insert->bindParam(':telefono', $_POST['telefono']);
 
             $insert->execute();
 
-            header('Location: guardado.php');
+            header('Location: index.php');
     exit(); 
             }
     }catch (PDOException $e) {
