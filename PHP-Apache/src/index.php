@@ -7,7 +7,7 @@
     </head>
     <body>
     <?php
-    $url = "pgsql:host=172.17.0.3;port=5432;dbname=mydb;";
+    $url = "pgsql:host=172.17.0.2;port=5432;dbname=mydb;";
     $pdo = new PDO($url, "postgres", "password", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         if (isset($_GET['editar'])) {
             $idEditar = $_GET['editar'];
